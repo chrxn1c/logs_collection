@@ -18,14 +18,16 @@ def main():
         date.today(),
         datetime.now(),
         Alexey,
-        LoggingLevel.CRITICAL)
+        LoggingLevel.CRITICAL,
+        "Brain is damaged")
 
     Ivan = User("Ivan", "Antsiferov", 2)
     log_of_Ivan = Log(
         date.today(),
         datetime.now(),
         Ivan,
-        LoggingLevel.WARNING)
+        LoggingLevel.WARNING,
+        "Rage is imminent")
 
     logger = Logger([Ivan])
     logger.accept_event(log_of_Alexey)
