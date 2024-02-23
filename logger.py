@@ -18,12 +18,12 @@ class Logger:
     def accept_event(self, log: Log) -> None:
         self._logs.append(log)
 
-        if not (log.user in self.tracked_users):
+        if log.user not in self.tracked_users:
             return
 
         self.tracked_users_to_events_count[log.user] += 1
         if (self.tracked_users_to_events_count[log.user]) % 10 == 0:
-            self.notify_user(log, self.tracked_users_to_events_count[log.user])
+            self.notify_user(log.user)
 
     def retrieve_by_logging_level(self, requested_level: LoggingLevel) -> list[Log]:
         fetched_logs: list[Log] = []
@@ -41,5 +41,6 @@ class Logger:
         for new_tracked_user in new_tracked_users:
             self.tracked_users_to_events_count[new_tracked_user] = 0
 
-    def notify_user(user: User, event_count: int) -> None:
-        print(f"User {user.get_full_name} now has {event_count} errors!")
+    def notify_user(self, user: User) -> None:
+        print(f"User {user.get_full_name} now has {
+              self.tracked_users_to_events_count[user]} errors!")
