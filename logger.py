@@ -32,6 +32,10 @@ class Logger:
                 fetched_logs.append(log)
         return fetched_logs
 
+    def notify_user(self, user: User) -> None:
+        print(f"User {user.get_full_name()} now has {
+              self.tracked_users_to_events_count[user]} errors!")
+
     def output_logs(self) -> None:
         with open("logs.txt", "w+") as outputted_logs:
             for log in self._logs:
@@ -40,7 +44,3 @@ class Logger:
     def _initialize_new_tracked_users_to_dict(self, new_tracked_users: list[User]) -> None:
         for new_tracked_user in new_tracked_users:
             self.tracked_users_to_events_count[new_tracked_user] = 0
-
-    def notify_user(self, user: User) -> None:
-        print(f"User {user.get_full_name()} now has {
-              self.tracked_users_to_events_count[user]} errors!")
