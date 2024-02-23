@@ -42,5 +42,5 @@ class Logger:
             self.tracked_users_to_events_count[new_tracked_user] = 0
 
     def notify_user(self, user: User) -> None:
-        print(f"User {user.get_full_name} now has {
+        print(f"User {user.get_full_name()} now has {
               self.tracked_users_to_events_count[user]} errors!")
