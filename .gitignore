@@ -163,5 +163,4 @@ cython_debug/
 logs.txt
 
 # vscode extensions
-.vscode
-vscode/
+.vscode/*
