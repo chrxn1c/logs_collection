@@ -2,7 +2,6 @@ from datetime import datetime, date
 from user import User
 from enum import Enum
 import logging
-# log: [date, time, user, logging_level, message]
 
 
 class LoggingLevel(Enum):
@@ -27,4 +26,3 @@ class Log:
 
     def __str__(self) -> str:
         return f"date = {str(self.date)}\ntime = {str(self.time)}\nuser = {str(self.user)}\nlogging_level = {str(self.logging_level)}\nmessage = {self.message}\n"
-    
