@@ -1,19 +1,11 @@
-
-# capture logs from system by some parameter
-
-# user can be tracked. every 10th error of the tracked users is reported.
-
-# output all logs as a file
-
-
 from user import User
 from datetime import datetime, date
-from logger import Logger, logs
+from logger import Logger
 from log import Log, LoggingLevel
 
 
 def main():
-    Alexey = User("Alexey", "Agarkov", 1)
+    Alexey = User("Alexey", "Agarkov")
     log_of_Alexey = Log(
         date.today(),
         datetime.now(),
@@ -21,7 +13,7 @@ def main():
         LoggingLevel.CRITICAL,
         "Brain is damaged")
 
-    Ivan = User("Ivan", "Antsiferov", 2)
+    Ivan = User("Ivan", "Antsiferov")
     log_of_Ivan = Log(
         date.today(),
         datetime.now(),
