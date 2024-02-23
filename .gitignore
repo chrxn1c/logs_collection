@@ -163,6 +163,7 @@ cython_debug/
 logs.txt
 
 # vscode extensions
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
