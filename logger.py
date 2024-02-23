@@ -18,6 +18,10 @@ class Logger:
 
     def accept_event(self, log: Log) -> None:
         logs.append(log)
+
+        if not (log.user in self.tracked_users):
+            return
+
         self.tracked_users_to_events_count[log.user] += 1
         if (self.tracked_users_to_events_count[log.user]) % 10 == 0:
             self.notify_user(log, self.tracked_users_to_events_count[log.user])
