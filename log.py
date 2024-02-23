@@ -27,3 +27,4 @@ class Log:
 
     def __str__(self) -> str:
         return f"date = {str(self.date)}\ntime = {str(self.time)}\nuser = {str(self.user)}\nlogging_level = {str(self.logging_level)}\nmessage = {self.message}\n"
+    

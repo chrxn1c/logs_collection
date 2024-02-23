@@ -6,3 +6,6 @@ class User:
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.second_name}, id = {self.id}"
+
+    def get_full_name(self) -> str:
+        return f"{self.first_name} {self.second_name}"
