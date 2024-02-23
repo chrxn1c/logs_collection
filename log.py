@@ -16,8 +16,6 @@ class LoggingLevel(Enum):
     def __str__(self) -> str:
         return f"{str(self.name)}, code = {str(self.value)}"
 
-# TODO: add message to Log
-
 
 class Log:
     def __init__(self, date: date, time: datetime, user: User, logging_level: LoggingLevel, message: str) -> None:

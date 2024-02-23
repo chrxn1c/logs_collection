@@ -4,6 +4,8 @@ from user import User
 logs: list[Log] = []
 
 
+# TODO: add tracking of user
+
 class Logger:
     def __init__(self, trackable_users: list[User]) -> None:
         self.tracked_users: list[User] = trackable_users.copy()
