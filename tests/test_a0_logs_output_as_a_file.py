@@ -58,10 +58,6 @@ def test_logs_output_as_a_file(users_and_logger: list) -> None:
     logs_from_file: str = logs_file.read()
     logs_file.close()
 
-    print(Alexey.id)
-    print(Ivan.id)
-    print(Maxim.id)
-
     # TODO: do ids have to be verified? ids depend on order in which users have been initialized
     assert "user = Alexey Agarkov, id = 1\nlogging_level = CRITICAL, code = 50\nmessage = Brain is damaged" in logs_from_file
     assert "user = Ivan Antsiferov, id = 2\nlogging_level = WARNING, code = 30\nmessage = Rage is imminent" in logs_from_file
