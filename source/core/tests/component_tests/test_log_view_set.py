@@ -2,10 +2,9 @@ from django.test import TransactionTestCase, RequestFactory
 
 from core.models import User, LogsPerUser
 
-from core.models import LoggingLevel
 from core.views import LogViewSet
 
-from core.services.notification_service import NotificationService
+from ...services.notification_service import NotificationService
 
 from source.core.views import UserViewSet
 
@@ -23,30 +22,6 @@ class TestLogViewSet(TransactionTestCase):
         self.random_fella = User.objects.create(first_name='IFucking', second_name='HateDjango')
         self.random_fella.save()
 
-    # def test_posting_a_log_failure(self):
-    #     print("Posting a log failure test")
-    #     print("Users:")
-    #     print(User.objects.all().values())
-    #     print("LogPerUsers:")
-    #     print(LogsPerUser.objects.all().values())
-    #     request = self.factory.post('/api/logs',
-    #                                 {'user_id': self.user.id, 'logging_level': 40, 'message': 'testing_posting_a_log_failure'})
-    #     response = LogViewSet.as_view({'post': 'create'})(request)
-    #
-    #     self.assertEqual(response.status_code, 401)
-    #
-    # def test_posting_a_log_success(self):
-    #     print("Posting a log success test")
-    #     print("Users:")
-    #     print(User.objects.all().values())
-    #     print("LogPerUsers:")
-    #     print(LogsPerUser.objects.all().values())
-    #     request = self.factory.post('/api/logs',
-    #                                 {'user_id': self.user.id, 'logging_level': 40, 'message': 'testing_posting_a_log_success'})
-    #     response = LogViewSet.as_view({'post': 'create'})(request)
-    #     print(response.data)
-    #     self.assertEqual(response.status_code, 201)
-    #
     def test_posting_a_log_failure(self):
         request = self.factory.post('/api/users',
                                     {'first_name': "Dmitry", 'second_name': 'Doe'})

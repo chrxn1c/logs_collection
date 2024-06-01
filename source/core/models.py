@@ -26,9 +26,6 @@ class LoggingLevel(models.Model):
     id = models.IntegerField(primary_key=True, unique=True, validators=[MinValueValidator(1), MaxValueValidator(5)])
     logging_level_name = models.CharField(max_length=10, unique=True, null=False)
 
-    # def __str__(self) -> str:
-    #     return repr(self)
-
 
 class Log(models.Model):
     id = models.AutoField(primary_key=True)
