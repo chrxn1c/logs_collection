@@ -19,7 +19,7 @@ class LoggingLevel(Enum):
 class Log:
     def __init__(self, date: date, time: datetime, user: User, logging_level: LoggingLevel, message: str) -> None:
         self.date: datetime.date = date
-        self.time: datetime.time = time
+        self.time: datetime.time = time.time()
         self.user: User = user
         self.logging_level: LoggingLevel = logging_level
         self.message: str = message
