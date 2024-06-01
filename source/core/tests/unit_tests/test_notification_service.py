@@ -55,6 +55,12 @@ class NotificationServiceTestCase(TestCase):
     def test_not_adding_log_entry(self):
         user = User.objects.create(first_name='Max', second_name='Berezhnoy')
         user.save()
+
+        # previous unit tests create LogsPerUser model with previous (but now non-existing) user, which breaks
+        # integrity of foreign keys, in order to avoid it I have to manually create a user with user_id = 2
+        random_fella = User.objects.create(first_name='Jane', second_name='Doe')
+        random_fella.save()
+
         logging_level = LoggingLevel.objects.get(id=50)
         log = Log.objects.create(user_id=user, logging_level=logging_level, message="Max Berezhnoy Debug Message")
         log.save()
@@ -63,6 +69,5 @@ class NotificationServiceTestCase(TestCase):
         self.service.add_log_entry(serialized_log)
 
         logs_per_user_of_current_user = LogsPerUser.objects.all().filter(user__id=user.id).values()[0]
-        assert len(logs_per_user_of_current_user) == 1
         assert logs_per_user_of_current_user["user_id"] == user.id
         assert logs_per_user_of_current_user["counter"] == 0
