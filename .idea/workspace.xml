@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9cac86c-1d21-4e24-bf6a-33667cecfd07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/scheduler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/services/log_output_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/services/notification_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/services/operation_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/services/retrieve_by_logging_level_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/component_tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/unit_tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/unit_tests/test_log_output_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/unit_tests/test_notification_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/unit_tests/test_operation_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/tests/unit_tests/test_retrieve_by_logging_level_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/logs_collection_drf/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs_collection/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_a0_logs_output_as_a_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_acceptance_of_one_event.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_acceptance_of_two_events.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_notifying_users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_retrieval_by_logging_level.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;chrxn1c&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/chrxn1c/logs_collection&quot;,
+    &quot;accountId&quot;: &quot;44bf4abc-4b34-4e10-abb2-f05f332081bc&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2fkLnOoI9yhsbN8ORe6BaDa1DGB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django tests.Test: logs_collection.logs_collection_drf.tests.unit_tests.test_operation_service.TestOperationService.test_get_operation_success.executor": "Run",
+    "Python.log_output_service.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "django",
+    "last_opened_file_path": "C:/Projects/Python/logs_collection",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.pro.customization.django.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\Python\logs_collection" />
+      <recent name="C:\Projects\Python\logs_collection\logs_collection\static\log" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9cac86c-1d21-4e24-bf6a-33667cecfd07" name="Changes" comment="" />
+      <created>1714340294537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714340294537</updated>
+      <workItem from="1714340295630" duration="1034000" />
+      <workItem from="1714341702241" duration="179000" />
+      <workItem from="1715603587447" duration="12656000" />
+      <workItem from="1716046788754" duration="20564000" />
+      <workItem from="1716198859882" duration="678000" />
+      <workItem from="1716199561742" duration="10017000" />
+      <workItem from="1716306417190" duration="3107000" />
+      <workItem from="1716369998457" duration="1915000" />
+      <workItem from="1716373787507" duration="3926000" />
+      <workItem from="1716599358253" duration="3997000" />
+      <workItem from="1717198340723" duration="10730000" />
+      <workItem from="1717209394244" duration="1263000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/logs_collection$log_output_service.coverage" NAME="log_output_service Coverage Results" MODIFIED="1716206854692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logs_collection/logs_collection_drf/services" />
+    <SUITE FILE_PATH="coverage/logs_collection$Test__logs_collection_logs_collection_drf_tests_unit_tests_test_operation_service_TestOperationService_test_get_operation_success.coverage" NAME="Test: logs_collection.logs_collection_drf.tests.unit_tests.test_operation_service.TestOperationService.test_get_operation_success Coverage Results" MODIFIED="1716603156113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
