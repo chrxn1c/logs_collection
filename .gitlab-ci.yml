@@ -13,7 +13,7 @@ test-job:
     - poetry run python ./source/manage.py migrate
   script:
     - echo "Running tests..."
-    - poetry run python ./manage.py test
+    - poetry run python ./source/manage.py test
 
 
 push-to-yandex-registry:
