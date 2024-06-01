@@ -38,7 +38,6 @@ class UserViewSet(ModelViewSet):
 )
 class LogViewSet(ModelViewSet):
     notification_service = NotificationService()
-    log_output_service = LogOutputService()
 
     lookup_field = 'id'
     serializer_class = serializers.LogSerializer
@@ -127,7 +126,6 @@ class RetrieveByLoggingLevelViewSet(ModelViewSet):
         }
     )
 )
-
 class LogFileOutputViewSet(ViewSet):
     operation_service = OperationService()
     log_output_service = LogOutputService()
