@@ -22,24 +22,6 @@ router.register(r'users', UserViewSet)
 router.register(r'notifications', NotificationViewSet)
 router.register(r'logging_levels', LoggingLevelViewSet)
 
-# urlpatterns += [
-#     path('helloworld', HelloWorldViewSet.as_view(
-#         {'get': 'retrieve'})),
-#     path('users', UserViewSet.as_view(
-#         {'post': 'create', 'get': 'retrieve'}
-#     )),
-#     path('logs', LogViewSet.as_view(
-#         {'post': 'method_name'})),
-#     path('logs', LogViewSet.as_view(
-#         {'get': 'retrieve_by_logging_level'})),
-#     path('logs/notify', LogViewSet.as_view(
-#         {'post', 'notify_user'}),
-#     ),
-#     path('logs/document', LogViewSet.as_view(
-#         {'get', 'get_all_logs_as_txt'}
-#     ))
-# ]
-
 url_additional = [
     path('logs/<str:logging_level_name>', RetrieveByLoggingLevelViewSet.as_view(
         {'get': 'retrieve_by_logging_level'}

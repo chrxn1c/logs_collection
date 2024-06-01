@@ -19,11 +19,6 @@ from logs_collection_drf.services.operation_service import OperationService
 from logs_collection_drf.services.retrieve_by_logging_level_service import RetrieveByLoggingLevelService
 
 
-class HelloWorldViewSet(ViewSet):
-    def retrieve(self, request):
-        return Response("Hello, world!")
-
-
 class UserViewSet(ModelViewSet):
     lookup_field = 'id'
     serializer_class = serializers.UserSerializer
@@ -32,11 +27,11 @@ class UserViewSet(ModelViewSet):
 
 @extend_schema_view(
     create=extend_schema(
-        summary='Post new log',
-        request=serializers.LogSerializer,
+        summary="Post new log",
+        request=LogSerializer,
         responses={
-            status.HTTP_200_OK: serializers.LogSerializer,
-            status.HTTP_404_NOT_FOUND: serializers.ApiErrorSerializer,
+            status.HTTP_201_CREATED: None,
+            status.HTTP_422_UNPROCESSABLE_ENTITY: None,
         },
         auth=None
     )
@@ -49,16 +44,6 @@ class LogViewSet(ModelViewSet):
     serializer_class = serializers.LogSerializer
     queryset = models.Log.objects.all()
 
-    @extend_schema(
-        summary="Post new log",
-        request=LogSerializer,
-        responses={
-            status.HTTP_201_CREATED: None,
-            status.HTTP_422_UNPROCESSABLE_ENTITY: None,
-        },
-        auth=None,
-
-    )
     def create(self, request, *args, **kwargs):
         serializer = serializers.LogSerializer(data=request.data)
 
@@ -76,6 +61,16 @@ class LoggingLevelViewSet(ModelViewSet):
     queryset = models.LoggingLevel.objects.all()
 
 
+@extend_schema_view(
+    get_notifications_of_user=extend_schema(
+        summary="Get notifications of chosen user",
+        request=NotificationSerializer,
+        responses={
+            status.HTTP_404_NOT_FOUND: serializers.ApiErrorSerializer,
+            status.HTTP_200_OK: NotificationSerializer
+        }
+    )
+)
 class NotificationViewSet(ModelViewSet):
     lookup_field = 'id'
     serializer_class = serializers.NotificationSerializer
@@ -132,6 +127,7 @@ class RetrieveByLoggingLevelViewSet(ModelViewSet):
         }
     )
 )
+
 class LogFileOutputViewSet(ViewSet):
     operation_service = OperationService()
     log_output_service = LogOutputService()

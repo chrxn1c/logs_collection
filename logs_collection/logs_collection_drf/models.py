@@ -51,11 +51,6 @@ class Notification(models.Model):
     #     return hash(repr(self))
 
 
-class LogsPerUser(models.Model):
-    user = models.OneToOneField(User, verbose_name='user', on_delete=models.CASCADE, primary_key=True)
-    counter = models.IntegerField(default=0)
-
-
 class Operation:
     id: UUID
     done: bool
@@ -80,3 +75,8 @@ class Operation:
                 "result": self.result,
             }
         )
+
+
+class LogsPerUser(models.Model):
+    user = models.OneToOneField(User, verbose_name='user', on_delete=models.CASCADE, primary_key=True)
+    counter = models.IntegerField(default=0)
