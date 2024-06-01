@@ -37,6 +37,7 @@ class NotificationService:
         if logging_level.id >= logging.ERROR:
             log_per_user, _ = LogsPerUser.objects.get_or_create(user__id=log["user_id"])
             log_per_user.counter += 1
+            print(LogsPerUser.objects.all().values())
             log_per_user.save()
 
             reported_notifications_count = Notification.objects.filter(user__id=log["user_id"]).count()
