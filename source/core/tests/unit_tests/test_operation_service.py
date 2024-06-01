@@ -1,8 +1,8 @@
 from uuid import uuid4
 from django.test import TestCase
 
-from logs_collection_drf.models import Operation
-from logs_collection_drf.services.operation_service import OperationService
+from core.models import Operation
+from core.services.operation_service import OperationService
 
 
 class TestOperationService(TestCase):
