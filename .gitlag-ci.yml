@@ -34,8 +34,8 @@ component-test-job:
 push-to-yandex-registry:
   stage: deploy
   image: mirror.gcr.io/docker:dind
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#  rules:
+#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   needs:
     - unit-test-job
     - component-test-job
