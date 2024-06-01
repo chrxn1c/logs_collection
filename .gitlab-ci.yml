@@ -34,7 +34,7 @@ push-to-yandex-registry:
 
 deploy-to-yc:
   stage: deploy
-  image: ubuntu
+  image: mirror.gcr.io/gubuntu
 #  rules:
 #    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   needs:
