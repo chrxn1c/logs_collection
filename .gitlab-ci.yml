@@ -3,7 +3,7 @@ stages:
   - build
   - deploy
 
-unit-test-job:
+test-job:
   stage: test
   image:  mirror.gcr.io/python:3.12.3-alpine3.20
   before_script:
@@ -22,8 +22,7 @@ push-to-yandex-registry:
 #  rules:
 #    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   needs:
-    - unit-test-job
-    - component-test-job
+    - test-job
   before_script:
     - echo $YC_JSON_KEY | docker login -u json_key --password-stdin cr.yandex
   script:
