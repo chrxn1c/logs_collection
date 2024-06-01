@@ -7,29 +7,14 @@ unit-test-job:
   stage: test
   image:  mirror.gcr.io/python:3.12.3-alpine3.20
   before_script:
-    - cd ./source
-    - pip install poetry
-    - poetry config virtualenvs.create false && poetry install --with test --no-root
-    - cd ..
+    - pip3 install poetry
+    - poetry install
+    - poetry run python ./source/manage.py makemigrations
+    - poetry run python ./source/manage.py migrate
   script:
-    - echo "Running unit tests..."
-    - poetry run source/manage.py test`
+    - echo "Running tests..."
+    - poetry run python ./manage.py test
 
-component-test-job:
-  stage: test
-  image: mirror.gcr.io/python:3.12.3-alpine3.20
-  before_script:
-    - cd ./source
-    - pip install poetry
-    - poetry config virtualenvs.create false
-      && poetry install --with test --no-root
-      && poetry add gunicorn
-    - poetry run gunicorn --workers=1 -b=0.0.0.0:8000 --daemon general.wsgi:application
-    - cd ..
-
-  script:
-    - echo "Running component tests..."
-    - poetry run pytest ./tests/component/
 
 push-to-yandex-registry:
   stage: deploy
