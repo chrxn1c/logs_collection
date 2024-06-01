@@ -53,3 +53,8 @@ class OperationSerializer(serializers.Serializer):
 
 class GetOperationQuerySerializer(serializers.Serializer):
     id = serializers.UUIDField(required=True)
+
+
+class LogPerUserSerializer(serializers.Serializer):
+    id = serializers.IntegerField(required=True)
+    counter = serializers.IntegerField(required=True)
