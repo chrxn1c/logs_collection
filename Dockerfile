@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM mirror.gcr.io/python:3.12-slim
 
 ENV PYTHONUNBUFFERED 1
 
