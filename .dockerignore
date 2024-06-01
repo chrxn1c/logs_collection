@@ -1,0 +1,6 @@
+source/db.sqlite3
+media
+__pycache__
+.gitignore
+.git
+.env*
